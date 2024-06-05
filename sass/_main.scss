@@ -1,0 +1,240 @@
+.collections__in{
+    padding: 80px 0;
+    color: #FFF;
+    .collections__title{
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    .collections__desc{
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .collections__cards{
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .collections__cards--card{
+        .collections__card--images{
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .collections__card--title{
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .collections__card--desc{
+            margin-top: 10px;
+            @include global_display;
+            gap: 0 10px;
+        }
+    }
+}
+
+
+.creators{
+    padding: 80px 0;
+    color: #FFF;
+
+    &__in{
+        .creators__card--btn{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .creators__bottom-btn{
+            display: none;
+            button{
+                @extend %global_btn;
+                padding: 20px 84px;
+            }
+        }
+    }
+    &__top{
+        display: flex;
+        align-items: flex-end   ;
+        justify-content: space-between;
+        &-title{
+            h3{
+                font-size: 38px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 22px;
+            }
+        }
+        &-btn{
+            display: block;
+            button{
+                @extend %global_btn;
+                padding: 20px 50px;
+            }
+        }
+    }
+
+    &__cards{
+        margin-top: 50px;
+        @include global_display;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__card{
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #3B3B3B;
+        max-width: 240px;
+        &-img{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        &-title{
+            margin-top: 20px;
+            @include global_display;
+            justify-content: center;
+        }
+        &-desc{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+@media (max-width:1070px) {
+    .collections__title{
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .collections__desc{
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .collections__cards{
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .collections__cards--card:nth-child(3){
+        display: none;
+    }
+
+
+    .creators__card:nth-child(7){
+        display: none;
+    }
+    .creators__card:nth-child(8){
+        display: none;
+    }
+    .creators__card:nth-child(9){
+        display: none;
+    }
+    .creators__card:nth-child(10){
+        display: none;
+    }
+    .creators__card:nth-child(11){
+        display: none;
+    }
+    .creators__card:nth-child(12){
+        display: none;
+    }
+
+
+    .creators__card{
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #3B3B3B;
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        gap: 0 30px;
+
+
+        .creators__info{
+            display: flex;
+            flex-direction: column;
+            .creators__card-title{
+                display: flex;
+                justify-content: flex-start;
+            }
+            .creators__card-desc{
+                display: flex;
+            }
+        }
+    }
+    
+
+}
+
+
+@media (max-width:705px) {
+    .collections__title{
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .collections__desc{
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .collections__cards{
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .collections__cards--card:nth-child(2){
+        display: none;
+    }
+
+
+    .creators__card:nth-child(6){
+        display: none;
+    }
+
+    .creators{
+        .creators__in{
+            .creators__top{
+                .creators__top-btn{
+                    display: none;
+                }
+            }
+            .creators__bottom-btn{
+                display: block;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+

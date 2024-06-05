@@ -1,0 +1,238 @@
+@import './mixins';
+
+
+
+
+
+.topbar__in{
+    padding: 34px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .topbar__links{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .topbar__btn{
+            button{
+                @extend %global_btn;
+                padding: 19px 30px;
+
+
+                i{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .topbar__hamburger{
+            display: none;
+
+        }
+    }
+
+    .topbar__list{
+        display: flex;
+        gap: 20px;
+        .topbar__link{
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+        }
+    }
+}
+
+
+
+
+
+.navbar__in{
+    padding: 80px 0;
+    @include global_display;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: #FFF;
+
+
+    .navbar__left{
+        .navbar__left--title{
+            max-width: 510px;
+            font-size: 67px;
+            font-weight: 600;
+        }
+
+        .navbar__left--desc{
+            margin-top: 20px;
+            max-width: 510px;
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        .navbar__left--btn{
+            margin-top: 30px;
+            button{
+                @extend %global_btn;
+                padding: 19px 30px;
+
+            }
+        }
+
+        .navbar__left--statistics{
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap:60px;
+
+            h3{
+                font-size: 28px;
+                font-weight: 700;
+            }
+            p{
+                font-size: 24px;
+                font-weight: 400;
+            }
+        }
+    }
+
+
+    .navbar__right{
+        .navbar__right--card{
+            background-color: #3B3B3B;
+            border-radius: 20px;
+        }
+        .navbar__card--info{
+            padding: 22px 20px;
+            h3{
+                font-size: 22px;
+                font-weight: 600;
+            }
+            .navbar__card--desc{
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1070px) {
+    .topbar__links{
+        .topbar__list{
+            display: none;
+        }
+    }
+}
+
+@media (max-width:1070px) {
+    .topbar__links{
+        .topbar__btn{
+            display: none;
+        }
+    }
+
+    .topbar__in{
+        .topbar__links{
+            .topbar__hamburger{
+                display: block;
+                cursor: pointer;
+                button{
+                    background-color: transparent;
+                    border: none;
+                }
+                i{
+                    color: #FFF;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    .navbar__in{
+        .navbar__right{
+            .navbar__right--card{
+                .first-img {
+                    
+                        width: 400px;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:550px) {
+    .navbar__in{
+        .navbar__right{
+            .navbar__right--card{
+                img{
+                    max-width: 400px;
+                }
+            }
+        }
+
+        .navbar__left{
+            .navbar__left--btn{
+                display: flex;
+                justify-content: center;
+                button{
+                    padding: 19px 95px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:450px) {
+
+    .topbar__in{
+        padding: 34px 10px;
+
+    }
+
+    .navbar__in{
+        .navbar__right{
+            .navbar__right--card{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                img{
+                    max-width: 300px;
+                }
+            }
+        }
+
+        .navbar__left{
+            .navbar__left--title{
+                font-size: 28px;
+            }
+
+            .navbar__left--desc{
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    
+}
